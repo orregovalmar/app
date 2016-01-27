@@ -1,0 +1,19 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;	
+	
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+}
+

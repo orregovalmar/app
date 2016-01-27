@@ -1,0 +1,85 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="AUTHOR" content="jvaamond@fresno.pntic.mec.es y crisdiaz@telecable.es">
+<title>Actividad</title>
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<script language="JavaScript">
+<!--
+var alfab="abcdefghijklmnñopqrstuvxyz"
+var nump=5
+var nrp=2
+function corrixe(){
+var acertos=0
+var sol=""
+fiestrar=open("","novar","width=300,height=350,scrollbars")
+fiestrar.document.write("<table border='0' width='100%' cellspacing='0' cellpadding='4' bgcolor='#FFFFF2'><tr><td><p align='center'>")
+for(i=1;i<=nump;i++){var senresp=true 
+	for(j=1;j<=nrp;j++){
+		if(eval("document.test.resp"+i+"["+(j-1)+"].checked")==true){
+			sol+=alfab.substring(j-1,j);senresp=false;break
+		}
+}
+if(senresp==true){sol+="-"}
+}
+var tempo= new Date()
+
+fiestrar.document.write("<p align='center'><table>")
+fiestrar.document.write("<tr><td colspan='4' align='center'><font size='5'>Resultados del actividad</font><p></td></tr>")
+fiestrar.document.write("<tr><td width='33' bgcolor='#FFF4F4'>"+
+"<p align='center'>Preg</td><td width='35' bgcolor='#FFF4F4' align='center'>"+
+"Solu</td><td width='35' bgcolor='#FFF4F4' align='center'>Resp</td>"+
+"<td width='35' bgcolor='#FFF4F4'><p align='center'>Resul</td></tr>")
+for(i=1;i<=sol.length;i++){
+	resposta=document.test.tras.value.substring(i-1,i)
+	solucion=sol.substring(i-1,i)	
+	if(resposta==solucion){
+	acertos+=1
+	fiestrar.document.write("<tr><td align='center'>"+i+
+	"</td><td align='center'>"+resposta+"</td><td align='center'>"+solucion+
+	"</td><td align='center'><font color='#009933'>acierto</font></td></tr>")
+	}
+	else{
+	fiestrar.document.write("<tr><td align='center'>"+i+"</td><td align='center'>"+resposta+
+	"</td><td align='center'>"+solucion+"</td><td align='center'><font color='#FF0000'>fallo</font></td></tr>")
+	}
+}
+nota=10/nump*acertos;
+if(Math.floor(nota)!=Math.ceil(nota)){cadea=""+nota;for(var i=0;i<=cadea.length;i++){
+if(cadea.charAt(i)=="."){nota=cadea.substring(0,i+3);break;}}}
+fiestrar.document.write("<tr><td colspan='4' align='center'>Aciertos: "+acertos+" de "+nump+"</td></tr>")
+fiestrar.document.write("<tr><td colspan='4' align='center'>Nota: "+nota+"</td></tr>")
+fiestrar.document.write("</td></tr><tr><td colspan='4' align='center'><p><form><input type='button' value='Cerrar' name='pecharf' onClick='window.close()' style='background-color: #FFCC66'></form></td></tr></table></td></tr></table>")
+fiestrar.document.write("</table>")
+fiestrar.document.close()
+}
+// -->
+</script></head>
+<body>
+<form name="test">
+<table width="100%"><tbody><tr><td align="center"><table>
+<tbody>
+<tr><td height="20"></td><tr>
+<tr>
+<td><p align="center"><strong>Actividad de aprendizaje</strong></p></td>
+</tr></tbody></table></td></tr><tr><td>
+<table><tbody><tr><td><font color="#EC8000" size="4">1. </font></td><td bgcolor="#F2FFF2" width="100%">Los Asociados tienen la responsabilidad de saber cómo actuar en caso de que se genere un incendio.</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp1" type="radio"></td><td>Verdadero</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp1" type="radio"></td><td>Falso</td></tr></tbody></table>
+<table><tbody><tr><td><font color="#EC8000" size="4">2. </font></td><td bgcolor="#F2FFF2" width="100%">Las brigadas se integran con Asociados presentes de todos los turnos.</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp2" type="radio"></td><td>Verdadero</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp2" type="radio"></td><td>Falso</td></tr></tbody></table>
+<table><tbody><tr><td><font color="#EC8000" size="4">3. </font></td><td bgcolor="#F2FFF2" width="100%">Es de poca importancia que sepan cómo actuar en caso de que se genere una emergencia.</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp3" type="radio"></td><td>Verdadero</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp3" type="radio"></td><td>Falso</td></tr></tbody></table>
+<table><tbody><tr><td><font color="#EC8000" size="4">4. </font></td><td bgcolor="#F2FFF2" width="100%">No es necesario generar un plan de avacuación porque la compañía lo proporciona.</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp4" type="radio"></td><td>Verdadero</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp4" type="radio"></td><td>Falso</td></tr></tbody></table>
+<table><tbody><tr><td><font color="#EC8000" size="4">5. </font></td><td bgcolor="#F2FFF2" width="100%">No importa si algunas personas quedan dentro del edificio en una emergencia de incendio.</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp5" type="radio"></td><td>Verdadero</td></tr></tbody></table>
+<table><tbody><tr><td width="25">&nbsp;</td><td><input name="resp5" type="radio"></td><td>Falso</td></tr></tbody></table>
+</td></tr>
+<tr><td align="center" height="50"><input value="aabbb" name="tras" type="hidden">
+<input value="Calificar" name="resultados" onclick="corrixe()" style="background-color: #EC8000; color:#FFFFFF" type="button">
+<input value="Limpiar" name="limpar" style="background-color: #EC8000; color:#FFFFFF" type="reset"></td></tr>
+</tbody></table></form>
+
+</body></html>

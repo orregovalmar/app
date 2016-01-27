@@ -1,0 +1,53 @@
+        #Stage{
+    		margin: 0 auto;
+    	}
+    	@media only screen and (min-width:768px) and (max-width: 795px){
+            #Stage{
+            	zoom:0.97;
+            }
+        }
+        @media only screen and (min-width:720px) and (max-width: 767px){
+            #Stage{
+            	zoom:0.9;
+            }
+        }
+        @media only screen and (min-width:700px) and (max-width: 719px){
+            #Stage{
+            	zoom:0.88;
+            }
+        }
+        @media only screen and (min-width:640px) and (max-width: 699px){
+            #Stage{
+            	zoom:0.8;
+            }
+        }
+        @media only screen and (min-width:600px) and (max-width: 639px){
+            #Stage{
+            	zoom:0.75;
+            }
+        }
+        @media only screen and (min-width:560px) and (max-width: 599px){
+            #Stage{
+            	zoom:0.7;
+            }
+        }
+        @media only screen and (min-width:540px) and (max-width: 559px){
+            #Stage{
+            	zoom:0.68;
+            }
+        }
+        @media only screen and (min-width:480px) and (max-width: 539px){
+            #Stage{
+            	zoom:0.6;
+            }
+        }
+        @media only screen and (min-width:400px) and (max-width: 479px){
+            #Stage{
+            	zoom:0.5;
+            }
+        }
+        @media only screen and (max-width: 399px){
+            #Stage{
+            	zoom:0.45;
+            }
+        }
